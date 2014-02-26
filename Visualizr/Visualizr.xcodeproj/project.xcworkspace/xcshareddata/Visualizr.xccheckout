@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2AB47288-E079-48E9-80CA-CD8DABEE76A8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Visualizr</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7D4FCC74-C12B-4596-994B-0AECD7BE4D87</key>
+		<string>https://github.com/ruhee/hackathon.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Visualizr/Visualizr.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7D4FCC74-C12B-4596-994B-0AECD7BE4D87</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ruhee/hackathon.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7D4FCC74-C12B-4596-994B-0AECD7BE4D87</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7D4FCC74-C12B-4596-994B-0AECD7BE4D87</string>
+			<key>IDESourceControlWCCName</key>
+			<string>hackathon</string>
+		</dict>
+	</array>
+</dict>
+</plist>
