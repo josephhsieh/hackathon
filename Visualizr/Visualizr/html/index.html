@@ -41,6 +41,7 @@ label {
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
+
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
@@ -68,8 +69,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.tsv("data/gilenya.tsv", function(error, data) {
-
+d3.json("data/gilenya.json", function(error, data) {
   data.forEach(function(d) {
     d.value = +d.value;
   });
