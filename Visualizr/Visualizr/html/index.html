@@ -36,6 +36,7 @@ body {
 .gilenya:focus,
 .gilenya:active {
   fill: yellow;
+  fill-opacity: .8;
 }
 */
 
@@ -48,6 +49,7 @@ body {
 .placebo:focus,
 .placebo:active {
   fill: yellow;
+  fill-opacity: .8;
 }
 */
 .x.axis path {
@@ -188,11 +190,7 @@ d3.json("gilenya.json", function(error, data) {
     };
   })());
 
-   
-
-  var sortTimeout = setTimeout(function() {
-    d3.select("input").property("checked", true).each(change);
-  }, 2000);
+  
 
   function change() {
 
