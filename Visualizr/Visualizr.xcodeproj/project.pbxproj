@@ -27,6 +27,10 @@
 		A66EC92D18BE486700C891D4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A66EC92A18BE486700C891D4 /* LICENSE */; };
 		A66EC92F18BE48D300C891D4 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = A66EC92E18BE48D300C891D4 /* index.html */; };
 		A66EC93218BE4AB600C891D4 /* VisNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A66EC93118BE4AB600C891D4 /* VisNavigationViewController.m */; };
+		B977FEA218BE67700070EB25 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = B977FE9D18BE67700070EB25 /* styles.css */; };
+		B977FEA318BE67700070EB25 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B977FE9F18BE67700070EB25 /* data.json */; };
+		B977FEA418BE67700070EB25 /* gilenya.json in Resources */ = {isa = PBXBuildFile; fileRef = B977FEA018BE67700070EB25 /* gilenya.json */; };
+		B977FEA518BE67700070EB25 /* gilenya.tsv in Resources */ = {isa = PBXBuildFile; fileRef = B977FEA118BE67700070EB25 /* gilenya.tsv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +71,10 @@
 		A66EC92E18BE48D300C891D4 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		A66EC93018BE4AB600C891D4 /* VisNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisNavigationViewController.h; sourceTree = "<group>"; };
 		A66EC93118BE4AB600C891D4 /* VisNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisNavigationViewController.m; sourceTree = "<group>"; };
+		B977FE9D18BE67700070EB25 /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
+		B977FE9F18BE67700070EB25 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		B977FEA018BE67700070EB25 /* gilenya.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gilenya.json; sourceTree = "<group>"; };
+		B977FEA118BE67700070EB25 /* gilenya.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gilenya.tsv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +190,8 @@
 		A66EC92618BE486700C891D4 /* html */ = {
 			isa = PBXGroup;
 			children = (
+				B977FE9C18BE67700070EB25 /* css */,
+				B977FE9E18BE67700070EB25 /* data */,
 				A66EC92E18BE48D300C891D4 /* index.html */,
 				A66EC92718BE486700C891D4 /* lib */,
 			);
@@ -196,6 +206,24 @@
 				A66EC92A18BE486700C891D4 /* LICENSE */,
 			);
 			path = lib;
+			sourceTree = "<group>";
+		};
+		B977FE9C18BE67700070EB25 /* css */ = {
+			isa = PBXGroup;
+			children = (
+				B977FE9D18BE67700070EB25 /* styles.css */,
+			);
+			path = css;
+			sourceTree = "<group>";
+		};
+		B977FE9E18BE67700070EB25 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				B977FE9F18BE67700070EB25 /* data.json */,
+				B977FEA018BE67700070EB25 /* gilenya.json */,
+				B977FEA118BE67700070EB25 /* gilenya.tsv */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,9 +306,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B977FEA518BE67700070EB25 /* gilenya.tsv in Resources */,
 				A66EC92F18BE48D300C891D4 /* index.html in Resources */,
+				B977FEA318BE67700070EB25 /* data.json in Resources */,
 				A66EC90318BE423900C891D4 /* Images.xcassets in Resources */,
 				A66EC8F518BE423900C891D4 /* InfoPlist.strings in Resources */,
+				B977FEA218BE67700070EB25 /* styles.css in Resources */,
+				B977FEA418BE67700070EB25 /* gilenya.json in Resources */,
 				A66EC92D18BE486700C891D4 /* LICENSE in Resources */,
 				A66EC8FE18BE423900C891D4 /* Main.storyboard in Resources */,
 			);
@@ -524,6 +556,7 @@
 				A66EC91B18BE423900C891D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A66EC91C18BE423900C891D4 /* Build configuration list for PBXNativeTarget "VisualizrTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +565,7 @@
 				A66EC91E18BE423900C891D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
