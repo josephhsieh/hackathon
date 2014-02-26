@@ -1,0 +1,47 @@
+[
+	{
+		"type":"Upper respiratory infection",
+		"value":49.9,
+		"placebo":50.5
+	},
+	{
+		"type":"Headache",
+		"value":25.2,
+		"placebo":23
+	},
+	{
+		"type":"Abnormal liver function",
+		"value":15.8,
+		"placebo":5
+	},
+	{
+		"type":"Influenza virus infection",
+		"value":12.9,
+		"placebo":9.8
+	},
+	{
+		"type":"Diarrhea",
+		"value":11.8,
+		"placebo":7.4
+	},
+	{
+		"type":"Back pain",
+		"value":11.8,
+		"placebo":6.9
+	},
+	{
+		"type":"Fatigue",
+		"value":11.3,
+		"placebo":10.8
+	},
+	{
+		"type":"Cough",
+		"value":10.1,
+		"placebo":8.1
+	},
+	{
+		"type":"Urinary tract infection",
+		"value":8,
+		"placebo":11.2
+	}
+]
