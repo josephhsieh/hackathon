@@ -1,0 +1,13 @@
+{
+	'GILENYA' : {
+		'Upper respiratory infection' : 49.9,
+		'Headache' : 25.2,
+		'Abnormal liver function' : 15.8,
+		'Influenza virus infection' : 12.9,
+		'Diarrhea' : 11.8,
+		'Back pain' : 11.8,
+		'Fatigue' : 11.3,
+		'Cough' : 10.1,
+		'Urinary tract infection' : 8
+	}
+}
