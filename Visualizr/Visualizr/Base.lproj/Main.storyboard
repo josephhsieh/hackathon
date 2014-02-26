@@ -8,33 +8,64 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="VisViewController" sceneMemberID="viewController">
-                    <webView key="view" contentMode="scaleToFill" id="vxB-Bb-UrJ">
+                    <webView key="view" contentMode="scaleToFill" id="vxB-Bb-UrJ" customClass="VisWebView">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </webView>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="cog-J9-bO8"/>
+                        <barButtonItem systemItem="rewind" id="GYy-fZ-YPm">
+                            <connections>
+                                <action selector="goBack" destination="vxB-Bb-UrJ" id="5Ws-WC-7Hi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="60" style="plain" systemItem="fixedSpace" id="xGe-CO-9eL"/>
+                        <barButtonItem systemItem="refresh" id="WMF-5N-TM8">
+                            <connections>
+                                <action selector="reload" destination="vxB-Bb-UrJ" id="pog-Vt-IIv"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem width="60" style="plain" systemItem="fixedSpace" id="88j-R2-hkM"/>
+                        <barButtonItem systemItem="fastForward" id="HL6-iq-MUB">
+                            <connections>
+                                <action selector="goForward" destination="vxB-Bb-UrJ" id="pnj-wB-wLf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="i0c-Up-J70"/>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="bHw-QM-t9I"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="back" destination="GYy-fZ-YPm" id="KxX-IF-deN"/>
+                        <outlet property="forward" destination="HL6-iq-MUB" id="hdQ-rB-KWa"/>
+                        <outlet property="refresh" destination="WMF-5N-TM8" id="thW-Yn-EBh"/>
+                        <outlet property="webView" destination="vxB-Bb-UrJ" id="BpX-Rt-v6A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1000" y="-165"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Vis Navigation View Controller-->
         <scene sceneID="A86-iD-QeP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yin-Ly-BTq" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="Yin-Ly-BTq" customClass="VisNavigationViewController" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="z21-r1-dNi">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="LQx-rd-RU1">
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" alpha="0.79999999999999982" contentMode="scaleToFill" id="LQx-rd-RU1">
                         <rect key="frame" x="0.0" y="724" width="1024" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1y0-ZC-oUj"/>

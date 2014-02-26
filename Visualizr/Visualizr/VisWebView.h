@@ -1,5 +1,5 @@
 //
-//  VisViewController.h
+//  VisWebView.h
 //  Visualizr
 //
 //  Created by Jeff DeButte on 2014-02-26.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VisViewController : UIViewController <UIWebViewDelegate>
+@interface VisWebView : UIWebView
 
 @end

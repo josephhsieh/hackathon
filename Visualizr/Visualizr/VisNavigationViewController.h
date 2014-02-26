@@ -1,5 +1,5 @@
 //
-//  VisViewController.h
+//  VisNavigationViewController.h
 //  Visualizr
 //
 //  Created by Jeff DeButte on 2014-02-26.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VisViewController : UIViewController <UIWebViewDelegate>
+@interface VisNavigationViewController : UINavigationController
 
 @end
