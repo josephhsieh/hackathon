@@ -10,6 +10,12 @@ body {
   width: 960px;
 }
 
+.title {
+  font: 16px Helvetica, Arial, sans-serif;
+  font-weight:bold;
+
+}
+
 .axis text {
   font: 10px sans-serif;
 }
@@ -23,7 +29,7 @@ body {
 
 .gilenya {
   fill: #ee0086;
-  fill-opacity: .9;
+  fill-opacity: .8;
 }
 /*
 .gilenya:hover,
@@ -35,6 +41,7 @@ body {
 
 .placebo{
   fill: steelblue;
+  fill-opacity: .8;
 }
 /*
 .placebo:hover,
@@ -59,7 +66,7 @@ label {
 <script>
 console.log('loading')
 
-var margin = {top: 20, right: 20, bottom: 30, left: 80},
+var margin = {top: 40, right: 20, bottom: 30, left: 80},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
@@ -116,8 +123,29 @@ d3.json("gilenya.json", function(error, data) {
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       .text("Occurrence");
+/*
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+        .selectAll(".tick text")
+          .call(wrap, x.rangeBand());
 
-    // bars = svg.selectAll(".bar").data(data).enter();
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+      .append("text")
+        .attr("y", 6)
+        .attr("x",-6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("Occurrence");
+*/
+      svg.append("text")
+        .attr("class", "title")
+        .attr("y",-10)
+        .attr("x",width/4)
+        .text("Side effects in GILENYA vs placebo in the FREEDOMS study");
 
   svg.selectAll(".gilenya")
       .data(data)
@@ -146,8 +174,8 @@ d3.json("gilenya.json", function(error, data) {
       var mySelf = (highlight == this);
       
       // reset all bar colours.
-      d3.selectAll(".placebo").style('fill', "#ee0086");
-      d3.selectAll(".gilenya").style('fill', "steelblue");
+      d3.selectAll(".placebo").style('fill', "steelblue");
+      d3.selectAll(".gilenya").style('fill', "#ee0086");
 
       if (highlight != null && mySelf){
         highlight = null;
@@ -167,7 +195,6 @@ d3.json("gilenya.json", function(error, data) {
   }, 2000);
 
   function change() {
-    clearTimeout(sortTimeout);
 
     // Copy-on-write since tweens are evaluated after a delay.
     var x0 = x.domain(data.sort(this.checked
