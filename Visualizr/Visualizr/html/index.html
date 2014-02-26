@@ -21,13 +21,16 @@ body {
   shape-rendering: crispEdges;
 }
 
-.bar {
+.gilenya {
   fill: steelblue;
   fill-opacity: .9;
 }
 
 .bar:hover {
   fill: brown;
+}
+.placebo{
+  fill: #ee0086;
 }
 
 .x.axis path {
@@ -99,14 +102,27 @@ d3.json("gilenya.json", function(error, data) {
       .style("text-anchor", "end")
       .text("Occurrence");
 
-  svg.selectAll(".bar")
+  // bars = svg.selectAll(".bar").data(data).enter();
+
+  svg.selectAll(".gilenya")
       .data(data)
     .enter().append("rect")
-      .attr("class", "bar")
+      .attr("class", "gilenya bar")
       .attr("x", function(d) { return x(d.type); })
-      .attr("width", x.rangeBand())
+      .attr("width", x.rangeBand()/2)
       .attr("y", function(d) { return y(d.value); })
       .attr("height", function(d) { return height - y(d.value); });
+
+    svg.selectAll(".placebo")
+      .data(data)
+    .enter().append("rect")
+      .attr("class", "placebo bar")
+      .attr("x", function(d) { return x(d.type)+(x.rangeBand()/2); })
+      .attr("width", x.rangeBand()/2)
+      .attr("y", function(d) { return y(d.placebo); })
+      .attr("height", function(d) { return height - y(d.placebo); });
+
+
 
   d3.select("input").on("change", change);
 
@@ -127,9 +143,13 @@ d3.json("gilenya.json", function(error, data) {
     var transition = svg.transition().duration(750),
         delay = function(d, i) { return i * 50; };
 
-    transition.selectAll(".bar")
+    transition.selectAll(".gilenya")
         .delay(delay)
         .attr("x", function(d) { return x0(d.type); });
+
+        transition.selectAll(".placebo")
+        .delay(delay)
+        .attr("x", function(d) { return x0(d.type)+(x.rangeBand()/2); });
 
     transition.select(".x.axis")
         .call(xAxis)
