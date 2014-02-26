@@ -21,6 +21,12 @@
 		A66EC90C18BE423900C891D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A66EC8EE18BE423900C891D4 /* UIKit.framework */; };
 		A66EC91418BE423900C891D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A66EC91218BE423900C891D4 /* InfoPlist.strings */; };
 		A66EC91618BE423900C891D4 /* VisualizrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A66EC91518BE423900C891D4 /* VisualizrTests.m */; };
+		A66EC92518BE47A000C891D4 /* VisWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A66EC92418BE47A000C891D4 /* VisWebView.m */; };
+		A66EC92B18BE486700C891D4 /* d3.js in Sources */ = {isa = PBXBuildFile; fileRef = A66EC92818BE486700C891D4 /* d3.js */; };
+		A66EC92C18BE486700C891D4 /* d3.min.js in Sources */ = {isa = PBXBuildFile; fileRef = A66EC92918BE486700C891D4 /* d3.min.js */; };
+		A66EC92D18BE486700C891D4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A66EC92A18BE486700C891D4 /* LICENSE */; };
+		A66EC92F18BE48D300C891D4 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = A66EC92E18BE48D300C891D4 /* index.html */; };
+		A66EC93218BE4AB600C891D4 /* VisNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A66EC93118BE4AB600C891D4 /* VisNavigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +59,14 @@
 		A66EC91118BE423900C891D4 /* VisualizrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisualizrTests-Info.plist"; sourceTree = "<group>"; };
 		A66EC91318BE423900C891D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A66EC91518BE423900C891D4 /* VisualizrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VisualizrTests.m; sourceTree = "<group>"; };
+		A66EC92318BE47A000C891D4 /* VisWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisWebView.h; sourceTree = "<group>"; };
+		A66EC92418BE47A000C891D4 /* VisWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisWebView.m; sourceTree = "<group>"; };
+		A66EC92818BE486700C891D4 /* d3.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.js; sourceTree = "<group>"; };
+		A66EC92918BE486700C891D4 /* d3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = d3.min.js; sourceTree = "<group>"; };
+		A66EC92A18BE486700C891D4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A66EC92E18BE48D300C891D4 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		A66EC93018BE4AB600C891D4 /* VisNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisNavigationViewController.h; sourceTree = "<group>"; };
+		A66EC93118BE4AB600C891D4 /* VisNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisNavigationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +126,11 @@
 		A66EC8F018BE423900C891D4 /* Visualizr */ = {
 			isa = PBXGroup;
 			children = (
+				A66EC92618BE486700C891D4 /* html */,
 				A66EC8F918BE423900C891D4 /* VisAppDelegate.h */,
 				A66EC8FA18BE423900C891D4 /* VisAppDelegate.m */,
 				A66EC8FC18BE423900C891D4 /* Main.storyboard */,
+				A66EC92218BE477C00C891D4 /* Model */,
 				A66EC8FF18BE423900C891D4 /* VisViewController.h */,
 				A66EC90018BE423900C891D4 /* VisViewController.m */,
 				A66EC90218BE423900C891D4 /* Images.xcassets */,
@@ -150,6 +166,36 @@
 				A66EC91218BE423900C891D4 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A66EC92218BE477C00C891D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A66EC93018BE4AB600C891D4 /* VisNavigationViewController.h */,
+				A66EC93118BE4AB600C891D4 /* VisNavigationViewController.m */,
+				A66EC92318BE47A000C891D4 /* VisWebView.h */,
+				A66EC92418BE47A000C891D4 /* VisWebView.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A66EC92618BE486700C891D4 /* html */ = {
+			isa = PBXGroup;
+			children = (
+				A66EC92E18BE48D300C891D4 /* index.html */,
+				A66EC92718BE486700C891D4 /* lib */,
+			);
+			path = html;
+			sourceTree = "<group>";
+		};
+		A66EC92718BE486700C891D4 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A66EC92818BE486700C891D4 /* d3.js */,
+				A66EC92918BE486700C891D4 /* d3.min.js */,
+				A66EC92A18BE486700C891D4 /* LICENSE */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +278,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A66EC92F18BE48D300C891D4 /* index.html in Resources */,
 				A66EC90318BE423900C891D4 /* Images.xcassets in Resources */,
 				A66EC8F518BE423900C891D4 /* InfoPlist.strings in Resources */,
+				A66EC92D18BE486700C891D4 /* LICENSE in Resources */,
 				A66EC8FE18BE423900C891D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,7 +302,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A66EC8F718BE423900C891D4 /* main.m in Sources */,
+				A66EC93218BE4AB600C891D4 /* VisNavigationViewController.m in Sources */,
 				A66EC90118BE423900C891D4 /* VisViewController.m in Sources */,
+				A66EC92B18BE486700C891D4 /* d3.js in Sources */,
+				A66EC92C18BE486700C891D4 /* d3.min.js in Sources */,
+				A66EC92518BE47A000C891D4 /* VisWebView.m in Sources */,
 				A66EC8FB18BE423900C891D4 /* VisAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
