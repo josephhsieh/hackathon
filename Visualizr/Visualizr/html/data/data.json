@@ -1,0 +1,40 @@
+{
+	'FREEDOMS' : {
+		'Upper respiratory infection' : {
+			'GILENYA' : 49.9,
+			'Placebo' : 50.5
+		},
+		'Headache' : {
+			'GILENYA' : 25.2,
+			'Placebo' : 23
+		},
+		'Abnormal liver function' : {
+			'GILENYA' : 15.8,
+			'Placebo' : 5
+		},
+		'Influenza virus infection' : {
+			'GILENYA' : 12.9,
+			'Placebo' : 9.8
+		},
+		'Diarrhea' : {
+			'GILENYA' : 11.8,
+			'Placebo' : 7.4
+		},
+		'Back pain' : {
+			'GILENYA' : 11.8,
+			'Placebo' : 6.9
+		},
+		'Fatigue' : {
+			'GILENYA' : 11.3,
+			'Placebo' : 10.8
+		},
+		'Cough' : {
+			'GILENYA' : 10.1,
+			'Placebo' : 8.1
+		},
+		'Urinary tract infection' : {
+			'GILENYA' : 8,
+			'Placebo' : 11.2
+		}
+	}
+}
