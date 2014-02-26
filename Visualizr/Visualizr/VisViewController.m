@@ -39,6 +39,9 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
+    NSString *url = [[[webView request] URL] absoluteString];
+    NSLog(@"Loading: %@", url);
     [self updateButtons];
 }
 - (void)webViewDidFinishLoad:(UIWebView *)webView
@@ -50,6 +53,21 @@
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
     [self updateButtons];
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    NSString *url = [[[webView request] URL] absoluteString];
+    
+    NSLog(@"ShoudLoad: %@", url);
+    
+    return YES;
+}
+
+- (void)loadRequest:(NSURLRequest *)request
+{
+    NSString *url = [[request URL] absoluteString];
+    NSLog(@"VisWebView Loading: %@", url);
 }
 
 - (void)updateButtons
