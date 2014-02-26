@@ -22,7 +22,7 @@ body {
 }
 
 .bar {
-  fill: #aaa;
+  fill: steelblue;
   fill-opacity: .9;
 }
 
@@ -80,8 +80,9 @@ d3.tsv("data/gilenya.tsv", function(error, data) {
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
-      .call(wrap, x.rangeBand())
-      .call(xAxis);
+      .call(xAxis)
+      .selectAll(".tick text")
+        .call(wrap, x.rangeBand());
 
   svg.append("g")
       .attr("class", "y axis")
@@ -127,6 +128,8 @@ d3.tsv("data/gilenya.tsv", function(error, data) {
 
     transition.select(".x.axis")
         .call(xAxis)
+        .selectAll(".tick text")
+      .call(wrap, x.rangeBand())
       .selectAll("g")
         .delay(delay);
   }
@@ -155,6 +158,11 @@ function wrap(text, width) {
       }
     }
   });
+}
+
+function type(d) {
+  d.value = +d.value;
+  return d;
 }
 
 </script>
