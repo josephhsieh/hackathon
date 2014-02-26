@@ -25,18 +25,24 @@ body {
   fill: steelblue;
   fill-opacity: .9;
 }
-
-.gilenya:hover {
+/*
+.gilenya:hover,
+.gilenya:focus,
+.gilenya:active {
   fill: yellow;
 }
+*/
+
 .placebo{
   fill: #ee0086;
 }
-
-.placebo:hover {
+/*
+.placebo:hover,
+.placebo:focus,
+.placebo:active {
   fill: yellow;
 }
-
+*/
 .x.axis path {
   display: none;
 }
@@ -126,9 +132,31 @@ d3.json("gilenya.json", function(error, data) {
       .attr("y", function(d) { return y(d.placebo); })
       .attr("height", function(d) { return height - y(d.placebo); });
 
-
-
   d3.select("input").on("change", change);
+
+  d3.selectAll("rect").on("click", (function(){
+    var highlight = null;
+
+    return function(){
+
+      var mySelf = (highlight == this);
+      
+      // reset all bar colours.
+      d3.selectAll(".placebo").style('fill', "#ee0086");
+      d3.selectAll(".gilenya").style('fill', "steelblue");
+
+      if (highlight != null && mySelf){
+        highlight = null;
+      }
+      else{
+        d3.select(this).style("fill", "yellow");  
+        highlight = this;
+      }
+
+    };
+  })());
+
+   
 
   var sortTimeout = setTimeout(function() {
     d3.select("input").property("checked", true).each(change);
