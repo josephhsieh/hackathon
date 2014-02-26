@@ -22,7 +22,7 @@ body {
 }
 
 .gilenya {
-  fill: steelblue;
+  fill: #ee0086;
   fill-opacity: .9;
 }
 /*
@@ -34,7 +34,7 @@ body {
 */
 
 .placebo{
-  fill: #ee0086;
+  fill: steelblue;
 }
 /*
 .placebo:hover,
@@ -86,13 +86,18 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+  function draw() {
+
+
 d3.json("gilenya.json", function(error, data) {
+
   data.forEach(function(d) {
     d.value = +d.value;
   });
 
   x.domain(data.map(function(d) { return d.type; }));
   y.domain([0, d3.max(data, function(d) { return d.value; })]);
+
 
   svg.append("g")
       .attr("class", "x axis")
@@ -112,7 +117,7 @@ d3.json("gilenya.json", function(error, data) {
       .style("text-anchor", "end")
       .text("Occurrence");
 
-  // bars = svg.selectAll(".bar").data(data).enter();
+    // bars = svg.selectAll(".bar").data(data).enter();
 
   svg.selectAll(".gilenya")
       .data(data)
@@ -138,7 +143,6 @@ d3.json("gilenya.json", function(error, data) {
     var highlight = null;
 
     return function(){
-
       var mySelf = (highlight == this);
       
       // reset all bar colours.
@@ -190,7 +194,14 @@ d3.json("gilenya.json", function(error, data) {
       .selectAll("g")
         .delay(delay);
   }
+
+  
 });
+
+}
+
+draw();
+
 
 function wrap(text, width) {
 
@@ -215,6 +226,8 @@ function wrap(text, width) {
       }
     }
   });
+
+
 }
 
 function type(d) {
