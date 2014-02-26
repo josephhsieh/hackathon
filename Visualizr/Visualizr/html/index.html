@@ -201,7 +201,7 @@ d3.json("gilenya.json", function(error, data) {
         .map(function(d) { return d.type; }))
         .copy();
 
-    var transition = svg.transition().duration(750),
+    var transition = svg.transition().duration(750).ease("quad"),
         delay = function(d, i) { return i * 50; };
 
     transition.selectAll(".gilenya")
