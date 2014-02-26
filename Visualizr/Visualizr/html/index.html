@@ -22,7 +22,7 @@ body {
 }
 
 .gilenya {
-  fill: steelblue;
+  fill: #ee0086;
   fill-opacity: .9;
 }
 
@@ -30,7 +30,7 @@ body {
   fill: yellow;
 }
 .placebo{
-  fill: #ee0086;
+  fill: steelblue;
 }
 
 .placebo:hover {
@@ -81,6 +81,7 @@ var svg = d3.select("body").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 d3.json("gilenya.json", function(error, data) {
+
   data.forEach(function(d) {
     d.value = +d.value;
   });
@@ -88,45 +89,47 @@ d3.json("gilenya.json", function(error, data) {
   x.domain(data.map(function(d) { return d.type; }));
   y.domain([0, d3.max(data, function(d) { return d.value; })]);
 
-  svg.append("g")
-      .attr("class", "x axis")
-      .attr("transform", "translate(0," + height + ")")
-      .call(xAxis)
-      .selectAll(".tick text")
-        .call(wrap, x.rangeBand());
+  function draw() {
 
-  svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
-    .append("text")
-      //.attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("x",-6)
-      .attr("dy", ".71em")
-      .style("text-anchor", "end")
-      .text("Occurrence");
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+        .selectAll(".tick text")
+          .call(wrap, x.rangeBand());
 
-  // bars = svg.selectAll(".bar").data(data).enter();
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+      .append("text")
+        //.attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("x",-6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("Occurrence");
 
-  svg.selectAll(".gilenya")
-      .data(data)
-    .enter().append("rect")
-      .attr("class", "gilenya bar")
-      .attr("x", function(d) { return x(d.type); })
-      .attr("width", x.rangeBand()/2)
-      .attr("y", function(d) { return y(d.value); })
-      .attr("height", function(d) { return height - y(d.value); });
+    // bars = svg.selectAll(".bar").data(data).enter();
 
-    svg.selectAll(".placebo")
-      .data(data)
-    .enter().append("rect")
-      .attr("class", "placebo bar")
-      .attr("x", function(d) { return x(d.type)+(x.rangeBand()/2); })
-      .attr("width", x.rangeBand()/2)
-      .attr("y", function(d) { return y(d.placebo); })
-      .attr("height", function(d) { return height - y(d.placebo); });
+    svg.selectAll(".gilenya")
+        .data(data)
+      .enter().append("rect")
+        .attr("class", "gilenya bar")
+        .attr("x", function(d) { return x(d.type); })
+        .attr("width", x.rangeBand()/2)
+        .attr("y", function(d) { return y(d.value); })
+        .attr("height", function(d) { return height - y(d.value); });
 
+      svg.selectAll(".placebo")
+        .data(data)
+      .enter().append("rect")
+        .attr("class", "placebo bar")
+        .attr("x", function(d) { return x(d.type)+(x.rangeBand()/2); })
+        .attr("width", x.rangeBand()/2)
+        .attr("y", function(d) { return y(d.placebo); })
+        .attr("height", function(d) { return height - y(d.placebo); });
 
+  }
 
   d3.select("input").on("change", change);
 
@@ -162,6 +165,9 @@ d3.json("gilenya.json", function(error, data) {
       .selectAll("g")
         .delay(delay);
   }
+
+  draw();
+
 });
 
 function wrap(text, width) {
@@ -187,6 +193,8 @@ function wrap(text, width) {
       }
     }
   });
+
+
 }
 
 function type(d) {
