@@ -22,15 +22,21 @@
 		A66EC91418BE423900C891D4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A66EC91218BE423900C891D4 /* InfoPlist.strings */; };
 		A66EC91618BE423900C891D4 /* VisualizrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A66EC91518BE423900C891D4 /* VisualizrTests.m */; };
 		A66EC92518BE47A000C891D4 /* VisWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A66EC92418BE47A000C891D4 /* VisWebView.m */; };
-		A66EC92B18BE486700C891D4 /* d3.js in Sources */ = {isa = PBXBuildFile; fileRef = A66EC92818BE486700C891D4 /* d3.js */; };
-		A66EC92C18BE486700C891D4 /* d3.min.js in Sources */ = {isa = PBXBuildFile; fileRef = A66EC92918BE486700C891D4 /* d3.min.js */; };
+		A66EC92B18BE486700C891D4 /* d3.js in Resources */ = {isa = PBXBuildFile; fileRef = A66EC92818BE486700C891D4 /* d3.js */; };
+		A66EC92C18BE486700C891D4 /* d3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = A66EC92918BE486700C891D4 /* d3.min.js */; };
 		A66EC92D18BE486700C891D4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A66EC92A18BE486700C891D4 /* LICENSE */; };
 		A66EC92F18BE48D300C891D4 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = A66EC92E18BE48D300C891D4 /* index.html */; };
 		A66EC93218BE4AB600C891D4 /* VisNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A66EC93118BE4AB600C891D4 /* VisNavigationViewController.m */; };
+<<<<<<< HEAD
 		B977FEA218BE67700070EB25 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = B977FE9D18BE67700070EB25 /* styles.css */; };
 		B977FEA318BE67700070EB25 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = B977FE9F18BE67700070EB25 /* data.json */; };
 		B977FEA418BE67700070EB25 /* gilenya.json in Resources */ = {isa = PBXBuildFile; fileRef = B977FEA018BE67700070EB25 /* gilenya.json */; };
 		B977FEA518BE67700070EB25 /* gilenya.tsv in Resources */ = {isa = PBXBuildFile; fileRef = B977FEA118BE67700070EB25 /* gilenya.tsv */; };
+=======
+		A66EC93718BE677E00C891D4 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A66EC93418BE677E00C891D4 /* data.json */; };
+		A66EC93918BE677E00C891D4 /* gilenya.tsv in Resources */ = {isa = PBXBuildFile; fileRef = A66EC93618BE677E00C891D4 /* gilenya.tsv */; };
+		A66EC93B18BE79A700C891D4 /* gilenya.json in Resources */ = {isa = PBXBuildFile; fileRef = A66EC93A18BE79A700C891D4 /* gilenya.json */; };
+>>>>>>> FETCH_HEAD
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,10 +77,16 @@
 		A66EC92E18BE48D300C891D4 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		A66EC93018BE4AB600C891D4 /* VisNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisNavigationViewController.h; sourceTree = "<group>"; };
 		A66EC93118BE4AB600C891D4 /* VisNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisNavigationViewController.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		B977FE9D18BE67700070EB25 /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
 		B977FE9F18BE67700070EB25 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		B977FEA018BE67700070EB25 /* gilenya.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gilenya.json; sourceTree = "<group>"; };
 		B977FEA118BE67700070EB25 /* gilenya.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gilenya.tsv; sourceTree = "<group>"; };
+=======
+		A66EC93418BE677E00C891D4 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		A66EC93618BE677E00C891D4 /* gilenya.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gilenya.tsv; sourceTree = "<group>"; };
+		A66EC93A18BE79A700C891D4 /* gilenya.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gilenya.json; sourceTree = "<group>"; };
+>>>>>>> FETCH_HEAD
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,8 +202,12 @@
 		A66EC92618BE486700C891D4 /* html */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				B977FE9C18BE67700070EB25 /* css */,
 				B977FE9E18BE67700070EB25 /* data */,
+=======
+				A66EC93318BE677E00C891D4 /* data */,
+>>>>>>> FETCH_HEAD
 				A66EC92E18BE48D300C891D4 /* index.html */,
 				A66EC92718BE486700C891D4 /* lib */,
 			);
@@ -208,6 +224,7 @@
 			path = lib;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		B977FE9C18BE67700070EB25 /* css */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +239,14 @@
 				B977FE9F18BE67700070EB25 /* data.json */,
 				B977FEA018BE67700070EB25 /* gilenya.json */,
 				B977FEA118BE67700070EB25 /* gilenya.tsv */,
+=======
+		A66EC93318BE677E00C891D4 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				A66EC93418BE677E00C891D4 /* data.json */,
+				A66EC93A18BE79A700C891D4 /* gilenya.json */,
+				A66EC93618BE677E00C891D4 /* gilenya.tsv */,
+>>>>>>> FETCH_HEAD
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -308,13 +333,21 @@
 			files = (
 				B977FEA518BE67700070EB25 /* gilenya.tsv in Resources */,
 				A66EC92F18BE48D300C891D4 /* index.html in Resources */,
+<<<<<<< HEAD
 				B977FEA318BE67700070EB25 /* data.json in Resources */,
+=======
+				A66EC92B18BE486700C891D4 /* d3.js in Resources */,
+				A66EC92C18BE486700C891D4 /* d3.min.js in Resources */,
+				A66EC93718BE677E00C891D4 /* data.json in Resources */,
+>>>>>>> FETCH_HEAD
 				A66EC90318BE423900C891D4 /* Images.xcassets in Resources */,
+				A66EC93B18BE79A700C891D4 /* gilenya.json in Resources */,
 				A66EC8F518BE423900C891D4 /* InfoPlist.strings in Resources */,
 				B977FEA218BE67700070EB25 /* styles.css in Resources */,
 				B977FEA418BE67700070EB25 /* gilenya.json in Resources */,
 				A66EC92D18BE486700C891D4 /* LICENSE in Resources */,
 				A66EC8FE18BE423900C891D4 /* Main.storyboard in Resources */,
+				A66EC93918BE677E00C891D4 /* gilenya.tsv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,8 +369,6 @@
 				A66EC8F718BE423900C891D4 /* main.m in Sources */,
 				A66EC93218BE4AB600C891D4 /* VisNavigationViewController.m in Sources */,
 				A66EC90118BE423900C891D4 /* VisViewController.m in Sources */,
-				A66EC92B18BE486700C891D4 /* d3.js in Sources */,
-				A66EC92C18BE486700C891D4 /* d3.min.js in Sources */,
 				A66EC92518BE47A000C891D4 /* VisWebView.m in Sources */,
 				A66EC8FB18BE423900C891D4 /* VisAppDelegate.m in Sources */,
 			);
