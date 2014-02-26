@@ -24,10 +24,13 @@
     [super viewDidLoad];
 
 	NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"];
-    NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+    //NSString* htmlString = [NSString stringWithContentsOfFile:htmlFile encoding:NSUTF8StringEncoding error:nil];
+    NSLog(@"htmlFile: %@", htmlFile);
+    NSURL *url = [[NSURL alloc] initFileURLWithPath:htmlFile];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
     
     self.webView.delegate = self;
-    [self.webView loadHTMLString:htmlString baseURL:nil];
+    [self.webView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning
